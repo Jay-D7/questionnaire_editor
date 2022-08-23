@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './EditEditor.css';
+import './EditorEdit.css';
 
 const EditEditor: FC = () => (
   <main>
