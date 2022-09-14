@@ -7,6 +7,7 @@ import EditorNew from './components/Editor/EditorNew';
 
 const App: FC = () => (
   <BrowserRouter>
+    <React.Fragment>Test test</React.Fragment>
     <Routes>
       <Route path="/" element={<Editor />} />
       <Route path="edit-editor" element={<EditorEdit />} />

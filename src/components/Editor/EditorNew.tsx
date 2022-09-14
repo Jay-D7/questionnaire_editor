@@ -1,6 +1,9 @@
 import React, { FC, Fragment, useState } from 'react';
+import EditorNewItem, { QuestionaireItem } from './EditorNewItem';
 import './EditorNew.css';
-import { EditorNewItem, QuestionaireItem } from './EditorNewItem';
+import Theme from '../UI/Theme';
+
+// const Container = styled.div``;
 
 const NewEditor: FC = () => {
   const [title, setTitle] = useState('');
@@ -22,7 +25,7 @@ const NewEditor: FC = () => {
   ) => setTitle(event.target.value);
 
   return (
-    <main>
+    <Theme>
       <h2>New Editor</h2>
       <input type="text" value={title} onChange={handleTitleChange} />
       ITEMS:
@@ -41,7 +44,7 @@ const NewEditor: FC = () => {
         />
       ))}
       <button onClick={handleAddQuestionaireItem}>Add new question</button>
-    </main>
+    </Theme>
   );
 };
 

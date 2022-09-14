@@ -27,7 +27,7 @@ export type QuestionaireItem =
       predefinedAnswers?: string[];
     };
 
-export const EditorNewItem: React.FC<{
+const EditorNewItem: React.FC<{
   item: QuestionaireItem;
   setQuestionaireItem: (item: QuestionaireItem) => void;
 }> = ({ item, setQuestionaireItem }) => {
@@ -55,7 +55,7 @@ export const EditorNewItem: React.FC<{
   );
 
   return (
-    <>
+    <div>
       <input value={item.question} onChange={createChangeHandler('question')} />
       <select onChange={createChangeHandler('type')}>
         {editorTypeOptions}
@@ -66,6 +66,8 @@ export const EditorNewItem: React.FC<{
         })}
       {/** map po item?.predefinedAnswers zeby wyswietlic inputy */}
       {newOptionButton}
-    </>
+    </div>
   );
 };
+
+export default EditorNewItem;
